@@ -36,17 +36,34 @@ form.addEventListener("submit", function(event) {
     let ticket40 = parseFloat(ticketRegPrice - ((ticketRegPrice * 40) / 100));
 
     let result = 0;
+    let offer = "";
+    let compartment = 0;
+    let code = 0;
 
     if (age < 18) {
         result = ticket20;
+        offer = `Sconto 20%`;
+        compartment = Math.floor(Math.random() * 9);
+        code = Math.floor(Math.random() * 10000);
+
     }
     else if (age > 65) {
         result = ticket40;
+        offer = `Sconto 40%`;
+        compartment = Math.floor(Math.random() * 9);
+        code = Math.floor(Math.random() * 10000);
     }
     else {
         result = ticketRegPrice;
+        offer = `Standard`;
+        compartment = Math.floor(Math.random() * 9);
+        code = Math.floor(Math.random() * 10000);
     }
     const ticketPrice = result.toFixed(2);
+
+
+    
+
 
     ticket.innerHTML = `
              <div class="d-flex justify-content-between">
@@ -59,15 +76,15 @@ form.addEventListener("submit", function(event) {
                 <div class="col-8 d-flex justify-content-between ">
                     <div>
                         <p>Offerta</p>
-                        <p></p>
+                        <p>${offer}</p>
                     </div>
                     <div>
                         <p>Carrozza</p>
-                        <p></p>
+                        <p>${compartment}</p>
                     </div>
                     <div>
                         <p>Codice CP</p>
-                        <p></p>
+                        <p>${code}</p>
                     </div>
                     <div>
                         <p>Costo biglietto</p>
