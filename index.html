@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <h1 class="mt-5 text-center text-uppercase">Calcola il presso del tuo biglietto</h1>
-    <div class="conainer mt-5 ">
+    <h1 class="mt-5 text-center text-uppercase">Calcola il prezzo del tuo biglietto</h1>
+    <div class="conainer mt-5 mx-4 ">
         <div class="col-12">
             <form action="" class="row row-cols-1 mx-5 bg-secondary">
 
@@ -25,13 +25,13 @@
                         <input class="form-control" type="number" id="km" />
                     </div>
                     <div class="col">
-                        <label class="form-label" for="age">Km da percorrere</label>
+                        <label class="form-label" for="age">Fascia d'età</label>
                         <input class="form-control" type="number" id="age" />
                     </div>
                 </div>
 
-                <div class="col">
-                    <button class="btn btn-success" type="submit">Genera</button>
+                <div class="col d-flex justify-content-center mb-4">
+                    <button class="btn btn-success mx-2" type="submit">Genera</button>
                     <button type="reset" class="btn btn-danger">Annulla</button>
                 </div>
 
@@ -41,13 +41,15 @@
         <h1 class="mt-5 text-center text-uppercase">Il tuo biglietto</h1>
 
 
-        <div class=" mx-5 bg-secondary">
-            <h2 class="mt-5 m">Detaglio passeggeri</h1>
+        <div class="mx-5 bg-secondary p-4">
+            <h3 class="text-uppercase">Detaglio passeggeri</h3>
             <div class="d-flex justify-content-between">
-                <div>
-                    <h2>Nome passeggero</h2>
+                <div class="col-4">
+                    <div>
+                        <h5 class="text-uppercase">Nome passeggero</h5>
+                    </div>
                 </div>
-                <div class="col-8 ">
+                <div class="col-8 d-flex justify-content-between ">
                     <p>Offerta</p>
                     <p>Carrozza</p>
                     <p>Codice CP</p>
