@@ -31,7 +31,7 @@ form.addEventListener("submit", function(event) {
     const km = parseInt(kmStr);
     const age = parseInt(ageStr);
 
-    let ticketRegPrice = parseFloat(Km * 0.21);
+    let ticketRegPrice = parseFloat(km * 0.21);
     let ticket20 = parseFloat(ticketRegPrice - ((ticketRegPrice * 20) / 100));
     let ticket40 = parseFloat(ticketRegPrice - ((ticketRegPrice * 40) / 100));
 
@@ -46,6 +46,7 @@ form.addEventListener("submit", function(event) {
     else {
         result = ticketRegPrice;
     }
+    const ticketPrice = result.toFixed(2);
 
     ticket.innerHTML = `
              <div class="d-flex justify-content-between">
@@ -56,11 +57,22 @@ form.addEventListener("submit", function(event) {
                     </div>
                 </div>
                 <div class="col-8 d-flex justify-content-between ">
-                    <p class="offerta">Offerta</p>
-                    <p></p>
-                    <p>Carrozza</p>
-                    <p>Codice CP</p>
-                    <p>Costo biglietto</p>
+                    <div>
+                        <p>Offerta</p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p>Carrozza</p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p>Codice CP</p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <p>Costo biglietto</p>
+                        <p>${ticketPrice} <span>&#8364;<\span></p>
+                    </div>
                 </div>
             </div>
             `;
