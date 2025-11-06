@@ -17,8 +17,6 @@ const ageInput = document.getElementById("age");
 
 
 const ticket = document.querySelector(".ticket");
-//const ticketHeader = document.querySelector(".ticket-header");
-//const ticketBody = document.querySelector(".ticket-body");
 
 
 form.addEventListener("submit", function(event) {
@@ -60,9 +58,6 @@ form.addEventListener("submit", function(event) {
         code = Math.floor(Math.random() * 10000);
     }
     const ticketPrice = result.toFixed(2);
-
-
-    
 
 
     ticket.innerHTML = `
